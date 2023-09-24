@@ -1,25 +1,32 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-color: #f2f2f2;
 }
 
 .promotion-form {
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
-    width: 300px;
+    max-width: 400px;
     background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
-label {
+.promotion-form label {
     display: block;
     margin-bottom: 5px;
+    text-align: left;
 }
 
-input[type="number"] {
+.promotion-form input[type="number"] {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease; /* Add a transition effect for input fields */
 }
 
 button {
@@ -28,12 +35,21 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Add a transition effect for the button */
 }
 
 button:hover {
     background-color: #0056b3;
 }
-
 #result {
     font-weight: bold;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#result.show {
+    opacity: 1;
 }
